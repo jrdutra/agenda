@@ -33,6 +33,12 @@ public class RegistroServiceImpl implements RegistroService {
 	}
 	
 	@Override
+	public Optional<Registro> buscarPorTelefone(String telefone){
+		log.info("Buscando um registro por telefone {}", telefone);
+		return Optional.ofNullable(registroRepository.findByTelefone(telefone));
+	}
+	
+	@Override
 	public Registro persistir(Registro registro) {
 		log.info("Persisitir registro: {}", registro);
 		return this.registroRepository.save(registro);

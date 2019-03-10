@@ -11,6 +11,8 @@ public interface RegistroRepository extends JpaRepository<Registro, Long> {
 	
 	Registro findByEmail(String email);
 	
+	Registro findByTelefone(String telefone);
+	
 	Registro findByNomeOrEmail(String nome, String email);
 	
 }

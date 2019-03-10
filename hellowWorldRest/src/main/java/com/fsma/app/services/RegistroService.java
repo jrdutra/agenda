@@ -23,6 +23,14 @@ public interface RegistroService {
 	Optional<Registro> buscarPorEmail(String email);
 	
 	/**
+	 * Retorna um registro dado o telefone
+	 * 
+	 * @param telefone
+	 * @return Optional<Registro>
+	 */
+	Optional<Registro> buscarPorTelefone(String telefone);
+	
+	/**
 	 * Cadastra um nome registro
 	 * 
 	 * @param registro
